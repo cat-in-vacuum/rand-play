@@ -5,8 +5,7 @@ GOTEST?=go test
 install:
 	$(GO) mod tidy
 
-.PHONY: build
-## build: build executable file
+.PHONY: unit-test
 unit-test:
 	$(GOTEST) -v -race -count=1 -cover ./generator
 
